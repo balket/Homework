@@ -39,7 +39,7 @@ var myPi = 5;
 var myLight = false;
 var myBook = 10;
 var plusTax = 5;
-console.log(myEmail,myMajor, myTextEditor, mySuperman, myPi, myLight, myBook+=plusTax);
+console.log(myEmail,myMajor, myTextEditor, mySuperman, myPi, myLight, myBook += plusTax);
 
 
 // Problem 3) Use the typeof operator to determine the data type of each variable like so.
@@ -51,7 +51,7 @@ console.log(myEmail,myMajor, myTextEditor, mySuperman, myPi, myLight, myBook+=pl
 console.log(typeof myMajor);
 console.log(typeof myZip);
 console.log(typeof mySuperman);
-
+// JG: The rest of the typeof calls are missing. Only the first three variables got tested.
 
 
 // Problem 4) Create string variables to store the following string values.
@@ -67,24 +67,30 @@ console.log(val1, val2, val3 );
 
 // Problem 5) Create an array of topics you would like to learn this semester.
 // Send this array to the console.
-var myToopic = new Array();
-myToopic[0] = "I want to learn how to make game";
-myToopic[1] = "how to make calander";
-myToopic[2] = " slider";
-console.log(myToopic  + "<br>");
+// JG I caught a spelling mistake in "Toopic". It's fixed now.
+var myTopic = new Array();
+myTopic[0] = "I want to learn how to make game";
+myTopic[1] = "how to make calander";
+myTopic[2] = " slider";
+
+
+console.log(myTopic  + "<br>");
+
+// JG: Great first time use of the array! It's preferred to do it this way, but your approach works.
+myTopic = ["I want to learn how to make game", "how to make calander", "slider"];
 
 // Problem 6) Send each item of the last array to the console. 
 // If your array variable is myArray then you would write
 	// console.log(myArray[0])
 	// console.log(myArray[1])
 	// and so on…
-console.log(myToopic[0])
-console.log(myToopic[1])
-console.log(myToopic[2])
+console.log(myTopic[0])
+console.log(myTopic[1])
+console.log(myTopic[2])
 // Problem 7) Use the yourArrayVariable.length property to determine the size of your array.
 // Send the result to the console.
 
-console.log(myToopic.length)
+console.log(myTopic.length)
 
 // Problem 8) Create a function named "clickMe".
 // When the user clicks the button with the ID of "clickMe" send the string 
@@ -94,6 +100,7 @@ console.log(myToopic.length)
 	// calculator.
 
 document.getElementById('clickMe').onclick = function (){
-
-console.log( ' leave me alone');
+	console.log('leave me alone');
 }
+
+// Grade: 9/10
