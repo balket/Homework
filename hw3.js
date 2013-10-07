@@ -21,27 +21,31 @@
 	// 5 minus 5
 	// 5 times 5
 	// 5 divided by 5
-var x = 5;
-var m = 5;
+var x;
+var m;
 
-console.log(x+m);
+x = 5;
+m = 5;
 
-var x = 5;
-var m = 5;
+console.log(x + m);
 
-console.log(x-m);
+x = 5;
+m = 5;
+
+console.log(x - m);
 
 
-var x = 5;
-var m = 5;
+x = 5;
+m = 5;
 
-console.log(x*m);
+console.log(x * m);
 
-var x = 5;
-var m = 5;
+x = 5;
+m = 5;
 
-console.log(x/m);
+console.log(x / m);
 
+// JG: You only need to use the var statement once for each variable and you always want to put spaces around your operators.
 
 // Problem 2
 	// Cookie Thief problem
@@ -93,11 +97,15 @@ if ( cookieThief == 'Dad' ) {
 var day = 'Thursday';
 var time = '6:30 PM';
 var room = 'HU 317';
-if ( day == 'Thursday' && time == '6:30 PM' && room == 'HU 317'  ) {
+
+if (day == 'Thursday' && time == '6:30 PM' && room == 'HU 317') {
     console.log(' You are in CA276');
-  } else {
+} else {
     console.log(' You are in another class ');
-    }
+}
+
+// JG: I modified the indentation a bit
+
 // Problem 4
 	// Bart Simpson detention problem
 	//
@@ -119,25 +127,31 @@ if ( day == 'Thursday' && time == '6:30 PM' && room == 'HU 317'  ) {
 	//
 	// console.log(bartSimpson);
 
-var bartSimpson = ''; i=0
-while (i<11)
-  {
-  bartSimpson = bartSimpson + "I will not make fun of the teacher using JavaScript code. " ;
-i++;
-  }{
+var bartSimpson = ''; 
+var i = 0
+
+while (i < 10) {
+ 	bartSimpson += "I will not make fun of the teacher using JavaScript code. " ;
+	i += 1;
+}
+
 console.log(bartSimpson);
-    }
+
+// JG: Note my changes to whitespace. The loop counter should go until 10.
+
 // Problem 5
 	// Do the same as you did in question 4 but write it as a for loop.
 
 
-var bartSimpson = ''; i=0
+bartSimpson = ''; 
 
-for (var i=0; i<11; i++)
-{
-bartSimpson = bartSimpson + "I will not make fun of the teacher using JavaScript code. " ;
-i++;
-}{
+for (i = 0; i < 10; i += 1) {
+	bartSimpson = bartSimpson + "I will not make fun of the teacher using JavaScript code. " ;
+
+	// I commented out the line below because you don't want to have two incrementers in a loop. This loop effectively incremented by two each time.
+	// i += 1;
+}
 
 console.log(bartSimpson);
-}
+
+// JG: Note my changes to whitespace. The loop counter should go until 10.

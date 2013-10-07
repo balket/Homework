@@ -34,12 +34,17 @@ var myEmail = "hailige77@yahoo.com";
 var myMajor = "webdeveloper";
 var myTextEditor = "Sublime";
 var myZip = 20904;
-var mySuperman = true;
-var myPi = 5;
-var myLight = false;
-var myBook = 10;
-var plusTax = 5;
-console.log(myEmail,myMajor, myTextEditor, mySuperman, myPi, myLight, myBook += plusTax);
+var supermanCanFly = true;
+var pi = 3.14159;
+var lightIsOn = false;
+var bookPrice = 10;
+var salesTax = 5;
+
+bookPrice += (salesTax / 100) * bookPrice;
+
+console.log(myEmail, myMajor, myTextEditor, supermanCanFly, pi, lightIsOn, bookPrice); // JG: The formula for calculating the book price was incorrect
+
+// JG: Note the change in variable names to make them more descriptive.
 
 
 // Problem 3) Use the typeof operator to determine the data type of each variable like so.
@@ -50,7 +55,7 @@ console.log(myEmail,myMajor, myTextEditor, mySuperman, myPi, myLight, myBook += 
 
 console.log(typeof myMajor);
 console.log(typeof myZip);
-console.log(typeof mySuperman);
+console.log(typeof supermanCanFly);
 // JG: The rest of the typeof calls are missing. Only the first three variables got tested.
 
 
@@ -63,6 +68,7 @@ console.log(typeof mySuperman);
 var val1 = "The dog's biting my shoes"; 
 var val2 = "<a href=\"#\">Some link</a>"; 
 var val3 = "JavaScript is \"easy\" if you are good at it"; 
+
 console.log(val1, val2, val3 );
 
 // Problem 5) Create an array of topics you would like to learn this semester.
@@ -102,5 +108,3 @@ console.log(myTopic.length)
 document.getElementById('clickMe').onclick = function (){
 	console.log('leave me alone');
 }
-
-// Grade: 9/10
