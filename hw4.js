@@ -37,10 +37,12 @@ athlete1.age = 40;
 athlete1.countryOrigin = 'Ethiopian';
 athlete1.addMedal = 'gold';
 athlete1.anolympian = true;
+athletel.introduce = 'My name is Haile Gebrselassie and I am from  Ethiopian'
  athlete1.getMethods = function () {
+ return this.introduce;
+ }
 
-	return  'My name is Haile Gebrselassie and I am from  Ethiopian';
-};
+
 
 
 
@@ -60,9 +62,11 @@ athlete2['height'] = '1.95m';
 athlete2['age'] = 27;
 athlete2['countryOrigin'] = 'Jamaica';
 athlete2['addMedal'] = 'gold';
+athlete2[introduce] = 'My name is Haile Gebrselassie and I am from  Ethiopian'
 athlete2['anolympian'] = true;
 athlete2['methods'] = function () {
-	return  'My name is Usain Bolt and I am from  Jamaica';
+return this.introduce;
+}
 };
 
 // Problem 3
@@ -75,8 +79,9 @@ gender : 'F',
 countryOrigin : 'Ethiopian',
 addMedal : 'gold',
 anolympian : true,
+introduce : 'My name is Haile Gebrselassie and I am from  Ethiopian'
 getMethods: function () {
-	return 'My name is Bezunesh Bekele and I am from  Ethiopian';
+return this.introduce;
 }
 };
 
