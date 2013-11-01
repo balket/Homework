@@ -82,8 +82,7 @@ anolympian : true,
 ['introduce'] = 'My name is Haile Gebrselassie and I am from  Ethiopian'
 getMethods: function () {
 return this.introduce;
-
-};
+}
 
 
 
