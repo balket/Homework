@@ -37,7 +37,7 @@ athlete1.age = 40;
 athlete1.countryOrigin = 'Ethiopian';
 athlete1.addMedal = 'gold';
 athlete1.anolympian = true;
-athletel.introduce = 'My name is Haile Gebrselassie and I am from  Ethiopian'
+athletel['introduce'] = 'My name is Haile Gebrselassie and I am from  Ethiopian'
  athlete1.getMethods = function () {
  return this.introduce;
  }
@@ -67,7 +67,7 @@ athlete2['anolympian'] = true;
 athlete2['methods'] = function () {
 return this.introduce;
 }
-};
+
 
 // Problem 3
 // Create the same object using ONE object literal
