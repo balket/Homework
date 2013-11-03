@@ -35,88 +35,75 @@ athlete1.name = 'Haile Gebrselassie';
 athlete1.height = '1.65m';
 athlete1.age = 40;
 athlete1.countryOrigin = 'Ethiopian';
-athlete1.addMedal = 'gold';
+athlete1.addMedal = ['3 gold', '4 bronth'];
 athlete1.anolympian = true;
-athletel['introduce'] = 'My name is Haile Gebrselassie and I am from  Ethiopian'
- athlete1.getMethods = function () {
- return this.introduce;
- }
-
-
-
-
+athlete1.introduce = "Hello! My name is " +  athlete1.name + " and I am from " + athlete1.countryOrigin;
+athlete1.getMethod = function () {
+return this.introduce;
+};
 
 
 // Problem 2
 // Create the object using the associate array syntax (i.e. strings within square brackets).
 
-
 var athlete2 = {};
-// athlete['foo'] = "bar"
-// athlete['method'] = function () {
+	// athlete['foo'] = "bar"
+// athlete['method'] = function() {
 // 
 // }
 
-athlete2['name']= 'Usain Bolt';
+athlete2['name'] = 'Usain Bolt';
 athlete2['height'] = '1.95m';
 athlete2['age'] = 27;
 athlete2['countryOrigin'] = 'Jamaica';
-athlete2['addMedal'] = 'gold';
-athlete2['introduce'] = 'My name is Haile Gebrselassie and I am from  Ethiopian'
+athlete1['addMedal'] = ['3 gold', '4 Bronze'];
 athlete2['anolympian'] = true;
-athlete2['methods'] = function () {
-return this.introduce;
-}
+athlete2['introduce']= "Hello! My name is " +  athlete2.name + " and I am from " + athlete2.countryOrigin;
+athlete2['method'] = function () {
+return this.introduce; 
+};
 
 
 // Problem 3
 // Create the same object using ONE object literal
-var athlete3 = {
-name :'Bezunesh Bekele',
-height : '1.45m',
-age : 30,
-gender : 'F',
-countryOrigin : 'Ethiopian',
-addMedal : 'gold',
-anolympian : true,
-['introduce'] = 'My name is Haile Gebrselassie and I am from  Ethiopian'
-getMethods: function () {
-return this.introduce;
-}
-
-
 
 // set key/value pairs inside here
-
-
+var athlete3 = {
+name: 'Bezunesh Bekele',
+height: '1.45m',
+age: 30,
+gender: 'F',
+countryOrigin: 'Ethiopian',
+addMedal: ['3 gold', '4 bronth'],
+introduce: 'Hello! My name is Bezunesh Bekele and I am from Ethiopian',
+anolympian: true,
+method:function(){
+	return this.introduce;
+ }
+}
 
 
 // Problem 4
 // Create a prototype for athelete. See below for examples:
 // https://github.com/galdamez/ca276-fall2013/blob/master/week8/prototypes.html
 
-
-
 // PROBLEM BELOW IS OPTIONAL
+function Athelete() {
 
-
-
-function athelete() {
-	this.name = 'Gabby Douglas';
-	this.height = 1.50;
-     this.age = 17;
+this.name = 'Gabby Douglas';
+this.height = '1.50m';
+this.age = 17;
 this.countryOrigin = 'USA';
-this.addMedal = 'gold';
+this.addMedal = ['3 gold', '4 bronth'];
+this.introduce = 'Hello! My name is " + this.name + this.countryOrigin;';
 this.anolympian = true;
-this.toString = function () {
-return this.name + ' is now a string';
-    }
+this.method = function () {
+return (this.name + this.countryOrigin);
 }
-var athelete;
-
-  var athelete = new athelete ('Gabby Douglas', 17, 'USA', 1.93 ['gold'], true, 'gymnastics');
-
+}
 // Problem 5
+
+
 // Create a prototype that inherits from Athlete. Pick from any of the types below:
 // TennisPlayer
 // TableTennisPlayer
@@ -140,23 +127,19 @@ var athelete;
 // Method below returns 'Splash splash splash!'
 // 
 // s1.swim();
-
-
-
 function Swimmer() {
 this.name = 'Michael Phelps';
 this.age = 28;
 this.height = 1.93;
 this.countryOrigin = 'USA';
-this.addMedal = 'gold', 'gold', 'silver';
+this.addMedal = ['gold', 'gold', 'silver'];
 this.anOlympian = true;
 this.brand='Speedo';
- this.toString = function () {
+ this.method = function () {
  return 'Splash splash splash!';
  }
  }
 
- var s1;
+var s1;
 
-  var s1 = new Swimmer('Michael Phelps', 28, 'USA', 1.93 ['gold', 'gold', 'silver'], true, 'Speedo');
- 
+var s1 = new Swimmer('Michael Phelps', 28, 'USA', 1.93 ['gold', 'gold', 'silver'], true, 'Speedo');
