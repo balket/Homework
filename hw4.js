@@ -128,18 +128,18 @@ return (this.name + this.countryOrigin);
 // 
 // s1.swim();
 function Swimmer() {
-this.name = 'Michael Phelps';
-this.age = 28;
-this.height = 1.93;
-this.countryOrigin = 'USA';
+this.name = 'Ye Shiwen';
+this.age = 17;
+this.height = 1.72;
+this.countryOrigin = 'China';
 this.addMedal = ['gold', 'gold', 'silver'];
 this.anOlympian = true;
 this.brand='Speedo';
- this.method = function () {
- return 'Splash splash splash!';
+this.method = function () {
+return 'Splash splash splash!';
  }
- }
+}
 
 var s1;
 
-var s1 = new Swimmer('Michael Phelps', 28, 'USA', 1.93 ['gold', 'gold', 'silver'], true, 'Speedo');
+var s1 = new Swimmer('Ye Shiwen', 17, 'China', 1.72 ['gold', 'gold', 'silver'], true, 'Speedo');
