@@ -27,19 +27,18 @@
 
 
 var athlete1 = {};
-// athlete.foo = "bar"
-// athlete.method = function () {
-// 
-// }
+
 athlete1.name = 'Haile Gebrselassie';
 athlete1.height = '1.65m';
 athlete1.age = 40;
 athlete1.countryOrigin = 'Ethiopian';
-athlete1.addMedal = ['3 gold', '4 bronth'];
-athlete1.anolympian = true;
-athlete1.introduce = "Hello! My name is " +  athlete1.name + " and I am from " + athlete1.countryOrigin;
-athlete1.getMethod = function () {
-return this.introduce;
+athlete1.medals = ['3 gold', '4 bronze'];
+athlete1.isOlympian = true;
+athlete1.introduce = function() {
+	return "Hello! My name is " + this.name + " and I am from " + this.countryOrigin;
+};
+athlete1.addMedal = function(medal) {
+	this.medals.push(medal);
 };
 
 
@@ -47,20 +46,18 @@ return this.introduce;
 // Create the object using the associate array syntax (i.e. strings within square brackets).
 
 var athlete2 = {};
-	// athlete['foo'] = "bar"
-// athlete['method'] = function() {
-// 
-// }
 
 athlete2['name'] = 'Usain Bolt';
 athlete2['height'] = '1.95m';
 athlete2['age'] = 27;
 athlete2['countryOrigin'] = 'Jamaica';
-athlete1['addMedal'] = ['3 gold', '4 Bronze'];
-athlete2['anolympian'] = true;
-athlete2['introduce']= "Hello! My name is " +  athlete2.name + " and I am from " + athlete2.countryOrigin;
-athlete2['method'] = function () {
-return this.introduce; 
+athlete1['medals'] = ['3 gold', '4 Bronze'];
+athlete2['isOlympian'] = true;
+athlete2['introduce'] = function() {
+	return "Hello! My name is " + this.name + " and I am from " + this.countryOrigin;
+};
+athlete2['method'] = function() {
+	this.medals.push(medal);
 };
 
 
@@ -69,18 +66,20 @@ return this.introduce;
 
 // set key/value pairs inside here
 var athlete3 = {
-name: 'Bezunesh Bekele',
-height: '1.45m',
-age: 30,
-gender: 'F',
-countryOrigin: 'Ethiopian',
-addMedal: ['3 gold', '4 bronth'],
-introduce: 'Hello! My name is Bezunesh Bekele and I am from Ethiopian',
-anolympian: true,
-method:function(){
-	return this.introduce;
- }
-}
+	name: 'Bezunesh Bekele',
+	height: '1.45m',
+	age: 30,
+	gender: 'F',
+	countryOrigin: 'Ethiopian',
+	medals: ['3 gold', '4 bronth'],
+	introduce: function() {
+		return "Hello! My name is " + this.name + " and I am from " + this.countryOrigin;
+	},
+	isOlympian: true,
+	addMedal: function() {
+		this.medals.push(medal);
+	}
+};
 
 
 // Problem 4
@@ -89,18 +88,20 @@ method:function(){
 
 // PROBLEM BELOW IS OPTIONAL
 function Athelete() {
+	this.name = 'Gabby Douglas';
+	this.height = '1.50m';
+	this.age = 17;
+	this.countryOrigin = 'USA';
+	this.medals = ['3 gold', '4 bronth'];
+	this.introduce = function() {
+		return "Hello! My name is " + this.name + " and I am from " + this.countryOrigin;
+	};
+	this.isOlympian = true;
+	this.addMedal = function() {
+		this.medals.push(medal);
+	};
+};
 
-this.name = 'Gabby Douglas';
-this.height = '1.50m';
-this.age = 17;
-this.countryOrigin = 'USA';
-this.addMedal = ['3 gold', '4 bronth'];
-this.introduce = 'Hello! My name is " + this.name + this.countryOrigin;';
-this.anolympian = true;
-this.method = function () {
-return (this.name + this.countryOrigin);
-}
-}
 // Problem 5
 
 
@@ -127,19 +128,25 @@ return (this.name + this.countryOrigin);
 // Method below returns 'Splash splash splash!'
 // 
 // s1.swim();
+
 function Swimmer() {
-this.name = 'Ye Shiwen';
-this.age = 17;
-this.height = 1.72;
-this.countryOrigin = 'China';
-this.addMedal = ['gold', 'gold', 'silver'];
-this.anOlympian = true;
-this.brand='Speedo';
-this.method = function () {
-return 'Splash splash splash!';
- }
-}
+	this.name = 'Ye Shiwen';
+	this.age = 17;
+	this.height = 1.72;
+	this.countryOrigin = 'China';
+	this.addMedal = ['gold', 'gold', 'silver'];
+	this.isOlympian = true;
+	this.brand = 'Speedo';
+	this.swim = function() {
+		return 'Splash splash splash!';
+	}
+};
+
+//JG: Without the two lines below the inheritance doesn't happen
+Swimmer.prototype = new Athlete();
+Swimmer.prototype.constructor = Athlete;
 
 var s1;
 
-var s1 = new Swimmer('Ye Shiwen', 17, 'China', 1.72 ['gold', 'gold', 'silver'], true, 'Speedo');
+//JG: No need to use the var statement a second time
+s1 = new Swimmer('Ye Shiwen', 17, 'China', 1.72, ['gold', 'gold', 'silver'], true, 'Speedo');
