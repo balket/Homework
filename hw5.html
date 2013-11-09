@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>homework 5</title>
+	<style>
+		#definitions {
+			background-color: #399;
+			height: 100%;
+			width: 100%;
+			z-index: 100;
+			position: fixed;
+			top: 0;
+			padding: 15px;
+			left: 0;
+			opacity: 0.3;
+		}
+
+		#drow {
+			top: 36%;
+			position: fixed;
+			left: 30%;
+			z-index: 200;
+			border-radius:40px;
+			padding: 50px;
+			background-color: #fff;
+			width: 380px;
+		}
+	
+	</style>
+</head>
+<body>
+	<h1>Document Object Model</h1>
+	
+	<form action="">
+		<input id="w3cExample" type="button" value="Show using W3C API"><br>
+		<input id="innerHTMLExample" type="button" value="Show using innerHTML"><br>
+		<input id="jQueryExample" type="button" value="Show using jQuery"><br>
+	</form>
+	<div id="container"></div>
+	<!-- <div id="definitions"></div>
+		<dl id="drow">
+     <dt>What is scripting?</dt>
+	<dd>A script is program code that doesn’t need pre-processing (e.g. compiling) before being run. </dd> 
+		</div> -->
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="hw5.js"></script>
+</body>
+</html>
