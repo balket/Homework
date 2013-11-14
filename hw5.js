@@ -27,48 +27,57 @@
 // Feel free to replace "Some word" and "Some definition" with text of your 
 // choosing. If you need ideas check out http://wordsmith.org/words/random.cgi
 
-document.getElementById('w3cExample').onclick = function() {
-	var drow, definitions, text, textNode, container;
+document.getElementById('w3c').onclick = function() {
 
-textNode = document.createTextNode(text);
-	definitions = document.createElement('div');
-	definitions.setAttribute('id', 'definitions');
-	definitions.setAttribute('style', 'display: block;');
+	var drow, art, word, definition, wordTextNode, definitionTextNode, boldTag, dlTag, dtTag, ddTag;
 
-	document.body.appendChild(definitions);
+	word = 'Drupal';
+	wordTextNode = document.createTextNode(word);
+	definition = 'Drupal is a free, open-source web development platform for online content and user communities. Drupal powers some of the busiest sites on the web, and can be adapted to virtually any visual design. Drupal runs over a million sites, including WhiteHouse.gov, World Economic Forum, Stanford University, and Examiner.com.';
+	definitionTextNode = document.createTextNode(definition);
 
-	drow = document.createElement('dl');
+	art = document.createElement('div');
+	art.setAttribute('id', 'art');
+	art.setAttribute('style', 'display: block;');
+
+	document.body.appendChild(art);
+
+	drow = document.createElement('div');
 	drow.setAttribute('id', 'drow');
 	drow.setAttribute('style', 'display: block;');
 
-var dt = document.createElement('dt');
-dt.appendChild(document.createTextNode('What is scripting?'));
+	boldTag = document.createElement('strong');
 
-drow.appendChild(dt);
-document.body.appendChild(drow);	
+	dlTag = document.createElement('dl');
 
-var dd = document.createElement('dd');
-dd.appendChild(document.createTextNode('A script is program code that doesn’t need pre-processing (e.g. compiling) before being run.'));
+	dtTag = document.createElement('dt');
 
-drow.appendChild(dd);
-document.body.appendChild(drow);
+	ddTag = document.createElement('dd');
 
+	drow.appendChild(dlTag);
+	dlTag.appendChild(dtTag);
+	dtTag.appendChild(boldTag);
+	boldTag.appendChild(wordTextNode);
+	dlTag.appendChild(ddTag);	
+	ddTag.appendChild(definitionTextNode);
+
+	document.body.appendChild(drow);
 };
+
+
+
+
 // Problem 2
 
 // Do the same thing as problem 1 only insert your HTML using the innerHTML
 // property of the DIV with id="definitions".
 
-document.getElementById('innerHTMLExample').onclick = function() {
-	var drow, definitions, text, textNode, container;
+document.getElementById('innerHTML').onclick = function() {
 
-	text = 'scripting';
-	textNode = document.createTextNode(text);
-
-	container = document.getElementById('container');
-
-	container.innerHTML += '<div id="definitions"></div>';
-	container.innerHTML += '<dl id="drow">What is scripting?<br\/>A script is program code that doesn’t need pre-processing (e.g. compiling) before being run.</dl>';
+	var definitions;
+	definitions = document.getElementById('definitions');
+	definitions.innerHTML += '<div id="art"></div>';
+	definitions.innerHTML += '<div id="drow"><dl><dt><strong>Drupal</strong></dt><dd>Drupal is a free, open-source web development platform for online content and user communities. Drupal powers some of the busiest sites on the web, and can be adapted to virtually any visual design. Drupal runs over a million sites, including WhiteHouse.gov, World Economic Forum, Stanford University, and Examiner.com.</dd></dl></div>';
 };
 
 // Problem 3
@@ -79,8 +88,9 @@ document.getElementById('innerHTMLExample').onclick = function() {
 //jQuery approach
 //jQuery approach
 
-$('#jQueryExample').on('click', function() {
-	$('#container')
-		.append('<div id="definitions"></div>')
-		.append('<dl id="drow">What is scripting?<br\/>A script is program code that doesn’t need pre-processing (e.g. compiling) before being run.</dl>');
+//jQuery approach
+$('#jQuery').on('click', function() {
+	$('#definitions')
+		.append('<div id="art"></div>')
+		.append('<div id="drow"><dl><dt><strong>Drupal</strong></dt><dd>Drupal is a free, open-source web development platform for online content and user communities. Drupal powers some of the busiest sites on the web, and can be adapted to virtually any visual design. Drupal runs over a million sites, including WhiteHouse.gov, World Economic Forum, Stanford University, and Examiner.com.</dd></dl></div>');
 })
