@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style type="text/css">
+     canvas{ border:#333 4px solid;
+     
+      }
+    </style>
+    
+    <body>
+ 
+    <canvas id="myCanvas" width="800" height="400"></canvas>
+    <script>
+	
+	 var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      context.rect(0, 0, canvas.width, canvas.height);
+
+      // add linear gradient
+      var grd = context.createLinearGradient(0, 0, canvas.width, canvas.height);
+      // light blue
+      grd.addColorStop(0, '#8ED6FF');   
+      // dark blue
+      grd.addColorStop(1, '#004CB3');
+      context.fillStyle = grd;
+      context.fill(); 
+	  
+	  
+	  
+	  
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      context.beginPath();
+      context.moveTo(560, 150);
+      context.lineTo(300, 50);
+      context.lineWidth = 400;
+
+      // set line color
+      context.strokeStyle = '#ff0000';
+      context.stroke();
+	  
+	  
+	   var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      context.beginPath();
+      context.moveTo(0, 150);
+      context.lineTo(23, 50);
+      context.lineWidth = 400;
+
+      // set line color
+      context.strokeStyle = '#c58336';
+      context.stroke();
+	  
+     var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      var radius = 70;
+
+      context.beginPath();
+      context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = 'blue';
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = '#003300';
+      context.stroke();
+	  context.shadowColor = '#999';
+      context.shadowBlur = 20;
+      context.shadowOffsetX = 15;
+      context.shadowOffsetY = 15;
+      context.fill();
+	var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      // begin custom shape
+      context.beginPath();
+      context.moveTo(200, 600);
+      context.bezierCurveTo(300, 100, 60, 150, 230, 150);
+      context.bezierCurveTo(25, 180, 320, 180, 200, 150);
+      context.bezierCurveTo(420, 150, 420, 120, 390, 100);
+      context.bezierCurveTo(430, 40, 370, 80, 500, 50);
+      context.bezierCurveTo(320, 5, 250, 20, 250, 50);
+      context.bezierCurveTo(200, 5, 150, 20, 170, 80);
+
+      // complete custom shape
+      context.closePath();
+      context.lineWidth = 5;
+      context.strokeStyle = 'black';
+      context.stroke();  
+	  
+	  var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      context.font = '17pt Calibri';
+      context.fillStyle = '#ffde00';
+      context.fillText('My first HTML 5 Canvas compostion!', 270, 370);
+	  
+	  
+	  var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var x = 250;
+      var y = 350;
+
+      context.font = '60pt Calibri';
+      context.lineWidth = 3;
+      // stroke color
+      context.strokeStyle = 'blue';
+      context.strokeText('TIGIST BALKE!', x, y);
+	
+	 </script>
+</html>

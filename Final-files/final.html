@@ -1,0 +1,153 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="utf-8" />
+                <title>Final Project</title>
+                
+                <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+                  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+                  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+                  
+               <style type="text/css">
+                        body {
+	font-family: Helvetica, sans-serif;
+	font-size: 14px;
+	background-color:#666;
+
+} 
+
+                        
+                        br { clear: both; }
+						h1{
+	
+	color: #FFF;
+	text-align: center;
+							}
+                        
+                        form div, input, label, select, textarea { display: block; float: left; font-weight: normal; }
+                        
+                        form div label, form div input { float: none; display: inline; }
+                        
+                        form div, label + input, label + textarea, label + select, label + textarea { margin-bottom: 15px; }
+                        
+                        form div br { clear: none; }
+                                                
+                        input, textarea { font: 12px Helvetica, Arial; color: DarkBlue; }
+                        
+                        input[type="text"] { width: 250px; }
+                        
+                        input[type="email"] { width: 175px; }
+                        
+                        input[type="radio"], input[type="checkbox"] { padding-right: 5px; }
+                        
+                        label { width: 100px; }
+                        
+                        a:visited { color: Blue; }
+                        
+                        textarea { display: inline; height: 75px; width: 225px; }
+                        
+                        #form_wrapper {
+	border: 4px solid;
+	border-radius: 25px;
+	margin: 0 auto;
+	border-color: #666;
+	padding: 20px 80px;
+	width: 400px;
+	background-color: #FFF;
+
+}
+                        
+                        .hidden { display: none; }
+                        
+                        .dialog { border-radius: 8px; font-size: 18px; font-weight: bold; padding: 8px 0; margin: 0 auto 16px auto; text-align: center; width: 80%; }
+                        
+                        .warning { background-color: LightPink; color: DarkRed; }
+                        
+                        .status { background-color: LightGreen; color: Teal; }
+                        
+                        #error { background-color: LightPink; border-radius: 4px; color: DarkRed; padding: 8px; }
+                </style>
+        </head>
+        
+        <body>
+
+                <h1>Conference Registration Form</h1>
+
+                <div id="form_wrapper">
+<form method="post" action="form-submit.cfm">
+
+                                <label for="first_name">First name</label>
+              <input type="text" id="first_name" name="first_name" class="required"><br>
+
+                                <label for="last_name">Last name</label>
+                                <input type="text" id="last_name" name="last_name" class="required"><br>
+
+                                <label id="age">Age</label>
+                                <input type="text" name="age"><br>
+
+                                <label for="email">Email</label>
+                                <input type="text" name="email" value=""><br>
+                                
+                                <label for="level">Please select you experience level</label>
+                                <select id="level" name="level">
+                                        <option value="">---Please select---</option>
+                                        <option value="Beginner">Beginner</option>
+                                        <option value="Intermediate">Intermediate</option>
+                                        <option value="Advanced">Advanced</option>
+                                </select>
+                                <br>
+
+                                <label for="bio">Bio</label>
+                                <textarea name="bio" id="bio"></textarea>
+<br>
+
+                                <label id="website">Personal web site</label>
+                                <input type="text" name="website"><br>
+
+                                <label id="homePhone">Home phone</label>
+                                <input type="text" name="homePhone"><br>
+
+                                <label id="mobilePhone">Mobile phone</label>
+                                <input type="text" name="mobilePhone"><br>                                
+
+                                <label for="meal">Meal preference</label>
+                                <div>
+                                        <label><input type="radio" id="meal" name="meal">À la carte</label><br>
+                                        <label><input type="radio" name="meal">Gluten intolerant meal</label><br>
+                                        <label><input type="radio" name="meal">Kosher</label><br>
+                                        <label><input type="radio" name="meal">Jain meal</label><br>
+                                        <label><input type="radio" name="meal">Muslim</label><br>
+                                        <label><input type="radio" name="meal">Vegetarian</label><br>
+                                        <label><input type="radio" name="meal">Vegan</label><br>
+                                </div>
+                                <br>
+
+                                <label for="skills">Skills</label>
+                                <div>
+                                        <label><input type="checkbox" id="skills" name="skills">HTML</label><br>
+                                        <label><input type="checkbox" name="skills">CSS</label><br>
+                                        <label><input type="checkbox" name="skills">JavaScript</label><br>
+                                        <label><input type="checkbox" name="skills">jQuery</label><br>
+                                        <label><input type="checkbox" name="skills">Dojo</label><br>
+                                        <label><input type="checkbox" name="skills">Prototype</label><br>
+                                        <label><input type="checkbox" name="skills">Flash</label><br>
+                                        <label><input type="checkbox" name="skills">Flex</label><br>
+                                </div>
+                                <br>
+
+                                <label for="doa">Expected date of arrival</label>
+                                <input type="text" id="doa" name="doa"><br>
+
+                                <div id="error" class="hidden"></div><br><br>
+                                
+                         
+                                <input type="submit" value="Submit"><br>
+                        
+                        </form>
+                </div>
+                <script src="final.js"></script>
+        </body>
+</html>
+
