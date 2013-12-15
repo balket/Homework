@@ -111,8 +111,8 @@ form.addEventListener('submit', function (e) {
 
        
         $(function() {
-    $('#doa').datepicker();
-          });
+$( "#datepicker" ).datepicker();
+});
 
         
         if (errors.length > 0) {
