@@ -22,12 +22,13 @@ console.log(document.querySelectorAll('.highlight'));
 
 // Any element under a form tag (hint: the asterisk is the wild card in CSS)
 
-console.log(document.querySelectorAll('form > *'));
+//JG: The > means direct descendants only so I removed it
+console.log(document.querySelectorAll('form *'));
 
 // All elements with the IDs "movies", "companies", or "fast_food"
 // (hint: use the comma to separate selectors)
 
-console.log(document.querySelectorAll('#companies,#movies,  #fast_food'));
+console.log(document.querySelectorAll('#companies, #movies, #fast_food'));
 
 // All elements that have an ID attribute
 
@@ -47,11 +48,13 @@ console.log(document.querySelectorAll('ol > li:nth-child(2), ul > li:nth-child(2
 
 // All elements that are empty
 
-console.log(document.querySelectorAll('*:empty')); 
+//JG: The asterisk doesn't hurt, but it's not necessary
+console.log(document.querySelectorAll(':empty'));
 
 // All elements that are checked
 
-console.log(document.querySelectorAll('*:checked'));
+//JG: The asterisk doesn't hurt, but it's not necessary
+console.log(document.querySelectorAll(':checked'));
 
 // All radio buttons
 
@@ -63,7 +66,7 @@ console.log(document.querySelectorAll('[type=radio]:checked'));
 
 // All TDs that represent the 2nd column in the table with ID "names"
 
-console.log(document.querySelectorAll('#names>tbody>tr>td:nth-child(2)'));
+console.log(document.querySelectorAll('#names > tbody > tr > td:nth-child(2)'));
 
 // All elements with the class name "hidden" that are not form elements
 
@@ -71,7 +74,7 @@ console.log(document.querySelectorAll('.hidden:not(form)'));
 
 // All even TRs that are descendants of a TBODY
 
-console.log(document.querySelectorAll('tbody>tr:nth-child(even)'));
+console.log(document.querySelectorAll('tbody > tr:nth-child(even)'));
 
 // All odd TRs that are descendants of a TBODY
 
